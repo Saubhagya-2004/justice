@@ -316,9 +316,17 @@ export default function HeroSection() {
         </div>
 
         {/* Mobile Layout - Visible only on Mobile */}
-        <div className="lg:hidden space-y-4">
+       <div className="lg:hidden space-y-4">
+         
           {/* Hero Section - Mobile */}
-          <div className="relative bg-[#0a2463] rounded-3xl shadow-2xl overflow-hidden">
+          <div className="relative bg-[#0a2463] rounded-3xl rounded-br-[80px] shadow-2xl overflow-hidden">
+             <svg width="0" height="0" className="absolute">
+              <defs>
+                <clipPath id="heroClip" clipPathUnits="objectBoundingBox">
+                  <path d="M0.04,0 H0.96 Q1,0,1,0.06 V0.53 L0.78,0.78 Q0.74,0.82,0.68,0.82 H0.17 Q0,0.82,0,0.71 V0.13 Q0,0,0.04,0 Z" />
+                </clipPath>
+              </defs>
+            </svg>
             <svg
               className="absolute inset-0 w-full h-full"
               viewBox="0 0 400 350"
