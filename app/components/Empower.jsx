@@ -625,16 +625,17 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Enquiry Tab - Fixed on right side */}
-      <div className=" right-0 top-1/2 -translate-y-1/2 z-50">
-        <div
-          className="bg-yellow-500 text-blue-900 font-bold py-2 px-3 flex rounded-bl-3xl shadow-lg cursor-pointer"
-          style={{ writingMode: "vertical-rl" }}
-        >
-          <span className="rotate-180 block mb-2">Enquiry</span>
-          <TbMessageChatbotFilled size={22} />
-        </div>
-      </div>
+     {/* Enquiry Tab - Right side of Hero ONLY */}
+<div className="absolute right-0 top-1/2 -translate-y-1/2 z-50">
+  <div
+    className="bg-yellow-500 text-blue-900 font-bold py-2 px-3 flex items-center gap-2 rounded-bl-3xl shadow-lg cursor-pointer"
+    style={{ writingMode: "vertical-rl" }}
+  >
+    <span className="rotate-180 block">Enquiry</span>
+    <TbMessageChatbotFilled size={22} />
+  </div>
+</div>
+
 
     </div>
   );
