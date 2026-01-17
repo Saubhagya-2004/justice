@@ -626,7 +626,7 @@ export default function HeroSection() {
       </div>
 
       {/* Enquiry Tab - Fixed on right side */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">
+      <div className=" right-0 top-1/2 -translate-y-1/2 z-50">
         <div
           className="bg-yellow-500 text-blue-900 font-bold py-2 px-3 flex rounded-bl-3xl shadow-lg cursor-pointer"
           style={{ writingMode: "vertical-rl" }}
@@ -636,8 +636,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-[#f5a623]"></div>
     </div>
   );
 }
