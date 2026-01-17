@@ -4,9 +4,9 @@
 import { useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import { CiMenuFries } from "react-icons/ci";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -41,7 +41,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Desktop Navigation - Full width container */}
@@ -58,7 +58,7 @@ const Navbar = () => {
                     {item.hasDropdown && (
                       <MdKeyboardArrowDown 
                         size={20} 
-                        className="ml-1 text-gray-100  rounded-md transition duration-300 bg-yellow-500"
+                        className="ml-1 text-gray-100 rounded-md transition duration-300 bg-yellow-500"
                       />
                     )}
                   </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
           <div className="flex md:hidden w-full items-center justify-end">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2 transition duration-300"
+              className="text-gray-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2 transition duration-300 z-50"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
@@ -95,39 +95,48 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - ABSOLUTE POSITIONING */}
       <div
-        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-white border-t border-gray-200 shadow-lg`}
+        className={`md:hidden fixed inset-0 top-20 ${isMenuOpen ? "block" : "hidden"} z-40`}
       >
-        {/* Phone Number in Mobile Menu */}
-        <div className="px-4 py-4 border-b border-gray-100 bg-blue-50">
-          <div className="bg-blue-900 text-white px-4 py-3 rounded-2xl font-bold flex items-center justify-center gap-3">
-            <div className="bg-yellow-400 rounded-full p-1.5">
-              <IoCall size={16} className="text-blue-900"/>
+        {/* Backdrop overlay */}
+        <div 
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
+          onClick={closeMenu}
+        />
+        
+        {/* Menu panel */}
+        <div className="absolute top-0 left-0 right-0 bg-white shadow-xl animate-slide-down">
+          {/* Phone Number in Mobile Menu */}
+          <div className="px-4 py-4 border-b border-gray-100 bg-blue-50">
+            <div className="bg-blue-900 text-white px-4 py-3 rounded-2xl font-bold flex items-center justify-center gap-3">
+              <div className="bg-yellow-400 rounded-full p-1.5">
+                <IoCall size={16} className="text-blue-900"/>
+              </div>
+              <span className="whitespace-nowrap">(888) 202-1350</span>
             </div>
-            <span className="whitespace-nowrap">(888) 202-1350</span>
           </div>
-        </div>
 
-        {/* Mobile Menu Items */}
-        <div className="px-4 py-3">
-          {navItems.map((item) => (
-            <div key={item.label} className="border-b border-gray-100 last:border-b-0">
-              <a
-                href={item.href}
-                onClick={closeMenu}
-                className="block text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md px-4 py-4 text-base font-semibold transition duration-300 flex items-center justify-between"
-              >
-                <span>{item.label}</span>
-                {item.hasDropdown && (
-                  <MdKeyboardArrowDown 
-                    size={20} 
-                    className="text-yellow-500"
-                  />
-                )}
-              </a>
-            </div>
-          ))}
+          {/* Mobile Menu Items */}
+          <div className="px-4 py-3 max-h-[calc(100vh-5rem)] overflow-y-auto">
+            {navItems.map((item) => (
+              <div key={item.label} className="border-b border-gray-100 last:border-b-0">
+                <a
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md px-4 py-4 text-base font-semibold transition duration-300 flex items-center justify-between"
+                >
+                  <span>{item.label}</span>
+                  {item.hasDropdown && (
+                    <MdKeyboardArrowDown 
+                      size={20} 
+                      className="text-yellow-500"
+                    />
+                  )}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
