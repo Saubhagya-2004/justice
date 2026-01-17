@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     { label: "About Us", href: "#" },
     { 
       label: "Mass Tort", 
