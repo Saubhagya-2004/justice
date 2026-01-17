@@ -6,6 +6,8 @@ import React from 'react'
 import Process from './components/Process'
 import Mission from './components/Mission'
 import Resource from './components/Resource'
+import Customer from './components/Customer'
+import Contact from './components/Contact'
 const page = () => {
   return (
     <div className='scroll-smooth bg-white'>
@@ -15,6 +17,8 @@ const page = () => {
      <Process/>
      <Mission/>
      <Resource/>
+     <Customer/>
+     <Contact/>
     </div>
   )
 }
