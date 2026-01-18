@@ -160,12 +160,12 @@ const Resource = () => {
                   fontFamily: "Georgia, serif",
                 }}
               >
-                Resources
+                Resource
               </h2>
             </div>
 
             {/* Right side - Image Container */}
-            <div className="w-1/2 -right-20 relative overflow-hidden rounded-tl-[55px]">
+            <div className="w-1/2 -right-19 bottom-1 relative overflow-hidden rounded-tl-[50px]">
               <Image
                 src={processjudge}
                 alt="Gavel on law book"
