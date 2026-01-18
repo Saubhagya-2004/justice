@@ -24,7 +24,7 @@ const Navbar = () => {
   const hoverStyle =
     "hover:text-[#FA9000] underline-offset-4 transition-all duration-200 cursor-pointer";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -36,31 +36,33 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "#" },
-    { 
-      label: "Mass Tort", 
+    {
+      label: "Mass Tort",
       href: "#",
-      hasDropdown: true 
+      hasDropdown: true,
     },
-    { 
-      label: "Class Action", 
+    {
+      label: "Class Action",
       href: "#",
-      hasDropdown: true 
+      hasDropdown: true,
     },
-    { 
-      label: "Personal Injury", 
+    {
+      label: "Personal Injury",
       href: "#",
-      hasDropdown: true 
+      hasDropdown: true,
     },
     { label: "Blogs", href: "#" },
     { label: "Contact Us", href: "#" },
   ];
 
   return (
-    <nav  className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-transparent backdrop-blur-md border-b border-white/20"
-          :  "bg-white backdrop-blur-md border-b border-gray-300 shadow-sm"
-      }`}>
+          : "bg-white backdrop-blur-md border-b border-gray-300 shadow-sm"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Desktop Navigation - Full width container */}
@@ -75,8 +77,8 @@ const Navbar = () => {
                   >
                     {item.label}
                     {item.hasDropdown && (
-                      <MdKeyboardArrowDown 
-                        size={20} 
+                      <MdKeyboardArrowDown
+                        size={20}
                         className="ml-1 text-gray-100 rounded-md transition duration-300 bg-yellow-500"
                       />
                     )}
@@ -84,15 +86,18 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Phone Number on right */}
             <div className="flex items-center">
-              <div className="bg-blue-900 text-white px-6 py-2 rounded-3xl font-bold flex items-center gap-3 hover:bg-blue-800 transition duration-300 cursor-pointer">
+              <a
+                href="tel:+18882021350"
+                className="bg-blue-900 text-white px-6 py-2 rounded-3xl font-bold flex items-center gap-3 hover:bg-blue-800 transition duration-300 cursor-pointer"
+              >
                 <div className="bg-yellow-400 rounded-full p-2">
-                  <IoCall size={16} className="text-blue-900"/>
+                  <IoCall size={16} className="text-blue-900" />
                 </div>
                 <span className="whitespace-nowrap">(888) 202-1350</span>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -105,9 +110,15 @@ const Navbar = () => {
               aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
-                <RxCross1 size={28} className="text-gray-700 hover:text-red-600 transition duration-300"/>
+                <RxCross1
+                  size={28}
+                  className="text-gray-700 hover:text-red-600 transition duration-300"
+                />
               ) : (
-                <CiMenuFries size={28} className="text-black hover:text-blue-900 transition duration-300"/>
+                <CiMenuFries
+                  size={28}
+                  className="text-black hover:text-blue-900 transition duration-300"
+                />
               )}
             </button>
           </div>
@@ -119,27 +130,34 @@ const Navbar = () => {
         className={`md:hidden fixed inset-0 top-20 ${isMenuOpen ? "block" : "hidden"} z-40`}
       >
         {/* Backdrop overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
           onClick={closeMenu}
         />
-        
+
         {/* Menu panel */}
         <div className="absolute top-0 left-0 right-0 bg-white shadow-xl animate-slide-down">
           {/* Phone Number in Mobile Menu */}
           <div className="px-4 py-4 border-b border-gray-100 bg-blue-50">
-            <div className="bg-blue-900 text-white px-4 py-3 rounded-2xl font-bold flex items-center justify-center gap-3">
-              <div className="bg-yellow-400 rounded-full p-1.5">
-                <IoCall size={16} className="text-blue-900"/>
-              </div>
-              <span className="whitespace-nowrap">(888) 202-1350</span>
-            </div>
+          <a
+  href="tel:+18882021350"
+  className="bg-blue-900 text-white px-6 py-2 rounded-3xl font-bold flex items-center gap-3 hover:bg-blue-800 transition duration-300 cursor-pointer"
+>
+  <div className="bg-yellow-400 rounded-full p-2">
+    <IoCall size={16} className="text-blue-900" />
+  </div>
+  <span className="whitespace-nowrap">(888) 202-1350</span>
+</a>
+
           </div>
 
           {/* Mobile Menu Items */}
           <div className="px-4 py-3 max-h-[calc(100vh-5rem)] overflow-y-auto">
             {navItems.map((item) => (
-              <div key={item.label} className="border-b border-gray-100 last:border-b-0">
+              <div
+                key={item.label}
+                className="border-b border-gray-100 last:border-b-0"
+              >
                 <a
                   href={item.href}
                   onClick={closeMenu}
@@ -147,8 +165,8 @@ const Navbar = () => {
                 >
                   <span>{item.label}</span>
                   {item.hasDropdown && (
-                    <MdKeyboardArrowDown 
-                      size={20} 
+                    <MdKeyboardArrowDown
+                      size={20}
                       className="text-yellow-500"
                     />
                   )}
