@@ -98,7 +98,7 @@ const Footer = () => {
               <div className="hidden lg:flex flex-col gap-3">
                 {/* First row - 4 icons */}
                 <div className="flex gap-3">
-                  <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                  <Link href="https://www.linkedin.com/company/kaizenque/posts/?feedView=all" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                     <FaLinkedinIn className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
@@ -113,13 +113,13 @@ const Footer = () => {
                 </div>
                 {/* Second row - 3 icons */}
                 <div className="flex gap-3">
-                  <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                  <Link href="https://www.instagram.com/kaizenque/" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                     <FaXTwitter />
                   </Link>
-                  <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                  <Link href="https://www.facebook.com/Kaizenque" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                     <FaFacebookF className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
-                  <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                  <Link href="https://www.instagram.com/kaizenque/" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                     <FaInstagram className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
                 </div>
@@ -190,7 +190,7 @@ const Footer = () => {
                 <div className="flex lg:hidden justify-center">
                 <div className="flex flex-col gap-2.5 mb-8">
                   <div className="flex gap-2.5">
-                    <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                    <Link href="https://www.linkedin.com/company/kaizenque/posts/?feedView=all" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                       <FaLinkedinIn className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
@@ -204,13 +204,13 @@ const Footer = () => {
                     </Link>
                   </div>
                   <div className="flex gap-2.5">
-                    <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                    <Link href="https://www.instagram.com/kaizenque/" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                       <FaXTwitter color="#FDB714" />
                     </Link>
-                    <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                    <Link href="https://www.facebook.com/Kaizenque" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                       <FaFacebookF className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
-                    <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
+                    <Link href="https://www.instagram.com/kaizenque/" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
                       <FaInstagram className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
                   </div>
