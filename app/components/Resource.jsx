@@ -75,12 +75,12 @@ const Resource = () => {
             </div>
 
             <div className="w-1/2 relative">
-              <div className="absolute bottom-0 right-0 w-full h-full">
+              <div className="absolute bottom-1 right-1  w-full h-full">
                 <Image
                   src={processjudge}
                   alt="Gavel on law book"
                   fill
-                  className="object-contain object-right-bottom"
+                  className="object-contain object-right-bottom rounded-2xl"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@ const Resource = () => {
                   fontFamily: "Georgia, serif",
                 }}
               >
-                Resource
+                Resources
               </h2>
             </div>
 
