@@ -5,13 +5,16 @@ import Link from 'next/link'
 import { Linkedin, Youtube, Facebook, Instagram } from 'lucide-react'
 import washington from '../../public/assets/images-washington.jpeg'
 import handshake from '../../public/assets/handshake.jpg'
-
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
+import { PiButterflyFill, PiButterflyLight } from "react-icons/pi";
+import { FaXTwitter,FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className='w-full relative bg-white'>
-      {/* Top Section - White background with Washington and overlapping cards */}
       <div className='relative w-full bg-white pb-8'>
-        {/* Washington Monument Background Image - Full Width */}
         <div className='w-full h-[500px] lg:h-[500px] md:h-[400px] sm:h-[350px] relative'>
           <Image 
             src={washington} 
@@ -96,28 +99,28 @@ const Footer = () => {
                 {/* First row - 4 icons */}
                 <div className="flex gap-3">
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                    <Linkedin className="w-5 h-5" strokeWidth={0} fill="currentColor" />
+                    <FaLinkedinIn className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                    <TikTokIcon />
+                    <FaTiktok />
                   </Link>
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 border-[#0052A3] text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                    <Youtube className="w-5 h-5" strokeWidth={0} fill="currentColor" />
+                    <IoLogoYoutube className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-[#e5a612] transition-all text-[#0052A3]">
-                    <ButterflyIcon />
+                    <PiButterflyFill/>
                   </Link>
                 </div>
                 {/* Second row - 3 icons */}
                 <div className="flex gap-3">
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                    <XIcon />
+                    <FaXTwitter />
                   </Link>
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                    <Facebook className="w-5 h-5" strokeWidth={0} fill="currentColor" />
+                    <FaFacebookF className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
                   <Link href="#" className="w-12 h-12 rounded-lg border-2 text-amber-400 border-white bg-blue-600 flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                    <Instagram className="w-5 h-5" strokeWidth={0} fill="currentColor" />
+                    <FaInstagram className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                   </Link>
                 </div>
               </div>
@@ -188,27 +191,27 @@ const Footer = () => {
                 <div className="flex flex-col gap-2.5 mb-8">
                   <div className="flex gap-2.5">
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                      <Linkedin className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
+                      <FaLinkedinIn className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                      <TikTokIcon color="#FDB714" />
+                      <FaTiktok color="#FDB714" />
                     </Link>
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                      <Youtube className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
+                      <IoLogoYoutube className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#FDB714] flex items-center justify-center hover:bg-[#e5a612] transition-all">
-                      <ButterflyIcon color="#0052A3" />
+                      <PiButterflyFill color="#0052A3" />
                     </Link>
                   </div>
                   <div className="flex gap-2.5">
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                      <XIcon color="#FDB714" />
+                      <FaXTwitter color="#FDB714" />
                     </Link>
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                      <Facebook className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
+                      <FaFacebookF className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
                     <Link href="#" className="w-11 h-11 rounded-lg border-2 border-[#FDB714] bg-[#0052A3] flex items-center justify-center hover:bg-white hover:text-[#0052A3] transition-all">
-                      <Instagram className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
+                      <FaInstagram className="w-[18px] h-[18px]" strokeWidth={0} fill="#FDB714" />
                     </Link>
                   </div>
                 </div>
@@ -235,23 +238,5 @@ const Footer = () => {
     </div>
   )
 }
-
-const TikTokIcon = ({ color = "currentColor" }) => (
-  <svg className="w-[18px] h-[18px] lg:w-5 lg:h-5" viewBox="0 0 24 24" fill={color}>
-    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
-  </svg>
-)
-
-const XIcon = ({ color = "currentColor" }) => (
-  <svg className="w-[18px] h-[18px] lg:w-5 lg:h-5" viewBox="0 0 24 24" fill={color}>
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-)
-
-const ButterflyIcon = ({ color = "currentColor" }) => (
-  <svg className="w-[18px] h-[18px] lg:w-5 lg:h-5" viewBox="0 0 24 24" fill={color}>
-    <path d="M12 2C8.5 2 5 5.5 5 9c0 2.5 1.5 4.5 3 6-1.5 1.5-3 3.5-3 6 0 .5.5 1 1 1s1-.5 1-1c0-2 1.5-4 3-5v4c0 .5.5 1 1 1s1-.5 1-1v-4c1.5 1 3 3 3 5 0 .5.5 1 1 1s1-.5 1-1c0-2.5-1.5-4.5-3-6 1.5-1.5 3-3.5 3-6 0-3.5-3.5-7-7-7zm-4 7c0-2.5 2-5 4-5s4 2.5 4 5c0 1.5-1 3-2 4h-4c-1-1-2-2.5-2-4z" />
-  </svg>
-)
 
 export default Footer
