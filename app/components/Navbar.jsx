@@ -1,13 +1,28 @@
 // components/Navbar.tsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect Scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) setScrolled(true);
+      else setScrolled(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const hoverStyle =
+    "hover:text-[#FA9000] underline-offset-4 transition-all duration-200 cursor-pointer";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -41,7 +56,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md relative z-50">
+    <nav  className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-transparent backdrop-blur-md border-b border-white/20"
+          :  "bg-white backdrop-blur-md border-b border-gray-300 shadow-sm"
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Desktop Navigation - Full width container */}
