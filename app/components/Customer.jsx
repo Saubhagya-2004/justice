@@ -84,24 +84,28 @@ const Customer = () => {
             <form className="space-y-4">
               {/* First Name - full width on mobile */}
               <input
+              required
                 type="text"
                 placeholder="First Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent lg:hidden text-[#003366]"
               />
               {/* Last Name - full width on mobile */}
               <input
+              required
                 type="text"
                 placeholder="Last Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent lg:hidden text-[#003366]"
               />
               {/* Email - full width on mobile */}
               <input
+              required
                 type="email"
                 placeholder="Email"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent lg:hidden text-[#003366]"
               />
               {/* Phone - full width on mobile */}
               <input
+              required
                 type="tel"
                 placeholder="Phone number"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent lg:hidden text-[#003366]"
@@ -110,11 +114,13 @@ const Customer = () => {
               {/* Desktop: Name row - 2 columns */}
               <div className="hidden lg:grid grid-cols-2 gap-4">
                 <input
+                  required
                   type="text"
                   placeholder="First Name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent text-[#003366]"
                 />
                 <input
+                  required
                   type="text"
                   placeholder="Last Name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent text-[#003366]"
@@ -124,11 +130,13 @@ const Customer = () => {
               {/* Desktop: Email and Phone row - 2 columns */}
               <div className="hidden lg:grid grid-cols-2 gap-4">
                 <input
+                  required
                   type="email"
                   placeholder="Email"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent text-[#003366]"
                 />
                 <input
+                  
                   type="tel"
                   placeholder="Phone number ex-12539752"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366] focus:border-transparent text-[#003366]"
